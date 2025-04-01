@@ -75,8 +75,8 @@ WSGI_APPLICATION = 'WebStore.wsgi.application'
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.oracle",
-        "NAME": "WebStore",
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": "webstore",
         "USER": "root",
         "PASSWORD": "1234",
         "HOST": "localhost",
