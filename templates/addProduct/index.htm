@@ -6,8 +6,10 @@
     <title>Adding Product</title>
 </head>
 <body>
-    {{ Pform }}
-    {% csrf_token %}
-    <button type="submit">submit</button>
+    <form method="post" action="{% url "AddProduct" %}" enctype="multipart/form-data">   
+        {% csrf_token %}
+        {{ Pform }}
+        <button type="submit">submit</button>
+    </form>
 </body>
 </html>
