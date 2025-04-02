@@ -1,5 +1,15 @@
 asgiref==3.8.1
+cffi==1.17.1
+cramjam==2.9.1
+cryptography==44.0.2
 Django==5.1.7
+django_deferred_polymorph==0.4.0
 mysqlclient==2.2.7
+pillow==11.2.0
+pycparser==2.22
+pymongo==4.11.3
+python-snappy==0.7.3
+pytz==2025.2
 sqlparse==0.5.3
 tzdata==2025.2
+winkerberos==0.12.0
