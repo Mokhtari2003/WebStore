@@ -1,15 +1,48 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adding Product</title>
+    <link href="{% static 'css/tailwind.min.css' %}" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1a202c; /* Dark background */
+            color: #f7fafc; /* Light text */
+            
+        }
+        form input{
+            background-color: #1a202c;
+            border: solid 1px #f7fafc;
+        }
+    </style>
 </head>
 <body>
-    <form method="post" action="{% url "AddProduct" %}" enctype="multipart/form-data">   
+    <form method="post" action="{% url 'AddProduct' %}" enctype="multipart/form-data" class="p-6">
         {% csrf_token %}
-        {{ Pform }}
-        <button type="submit">submit</button>
+
+        <label>ProductName : </label>
+            {{ Pform.ProductName }}
+        <br />
+        <label>Image : </label>
+        <input type="file" name="Image" accept="image/*" required id="id_Image">
+        <br />
+        <label>Category : </label>
+            {{ Pform.Category }}
+        <br />
+        <label>Price : </label>
+            {{ Pform.Price }}
+        <br />
+        <label>Stock : </label>
+            {{ Pform.Stock }}
+        <br />
+        <label>Brand : </label>
+            {{ Pform.Brand }}
+        <br />
+            
+            
+        <button type="submit" class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Submit</button>
     </form>
 </body>
 </html>
